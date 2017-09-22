@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFXChatApp.ChatClientFXGUIController">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox>
+                     <children>
+                        <Button fx:id="btnDisconnect" mnemonicParsing="false" text="Disconnect" onAction="#onActionDisconnect">
+                           <HBox.margin>
+                              <Insets bottom="17.0" left="17.0" right="17.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnConnect" mnemonicParsing="false" text="Connect" onAction="#onActionConnect">
+                           <HBox.margin>
+                              <Insets bottom="17.0" left="17.0" right="17.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="17.0" left="17.0" right="17.0" top="17.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Logged in as" underline="true">
+                     <VBox.margin>
+                        <Insets left="17.0" right="17.0" top="7.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblUsername" text="Anon" textFill="RED">
+                     <VBox.margin>
+                        <Insets bottom="17.0" left="35.0" right="17.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <VBox prefHeight="472.0" prefWidth="260.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Currently Online:">
+               <VBox.margin>
+                  <Insets left="17.0" right="17.0" top="7.0" />
+               </VBox.margin>
+            </Label>
+            <ListView fx:id="listViewOnlineUsers" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="17.0" left="17.0" right="17.0" top="17.0" />
+               </VBox.margin>
+            </ListView>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" text="Conversation">
+               <VBox.margin>
+                  <Insets bottom="17.0" left="17.0" right="17.0" />
+               </VBox.margin>
+            </Label>
+            <TextArea fx:id="txtAConvo">
+               <VBox.margin>
+                  <Insets bottom="17.0" left="17.0" right="17.0" />
+               </VBox.margin>
+            </TextArea>
+            <HBox>
+               <children>
+                  <Label text="Message:">
+                     <HBox.margin>
+                        <Insets bottom="17.0" left="17.0" right="17.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtFMessage" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="17.0" left="17.0" right="17.0" top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnSend" mnemonicParsing="false" text="Send" onAction="#onActionSend">
+                     <HBox.margin>
+                        <Insets bottom="17.0" left="7.0" right="17.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

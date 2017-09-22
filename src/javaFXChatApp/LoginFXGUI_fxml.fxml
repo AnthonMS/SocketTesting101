@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFXChatApp.LoginFXGUIController">
+   <children>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Enter your nickname and a server host">
+         <VBox.margin>
+            <Insets bottom="17.0" left="17.0" right="17.0" top="17.0" />
+         </VBox.margin>
+      </Label>
+      <TextField promptText="Nickname (Gayguy)" VBox.vgrow="NEVER" fx:id="txtFUserName">
+         <VBox.margin>
+            <Insets bottom="5.0" left="17.0" right="17.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField promptText="Server Host (192.168.0.110)" VBox.vgrow="NEVER" fx:id="txtFServerHost">
+         <VBox.margin>
+            <Insets bottom="17.0" left="17.0" right="17.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+      <HBox>
+         <children>
+            <Button mnemonicParsing="false" text="Connect" onAction="#onActionConnect2">
+               <HBox.margin>
+                  <Insets bottom="17.0" left="17.0" right="17.0" top="17.0" />
+               </HBox.margin>
+            </Button>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" text="Cancel" onAction="#onActionCancelConnect">
+               <HBox.margin>
+                  <Insets bottom="17.0" left="17.0" right="17.0" top="17.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

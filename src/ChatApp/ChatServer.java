@@ -9,8 +9,6 @@ import java.util.Scanner;
 
 public class ChatServer
 {
-    // Unique ID for each connection
-    private static int uniqueID;
     // an ArrayList to keep the list of Clients
     public static ArrayList<Socket> connectionArray = new ArrayList<Socket>();
     public static ArrayList<String> currentUsers = new ArrayList<String>();
@@ -27,7 +25,7 @@ public class ChatServer
             {
                 Socket SOCK = SERVER.accept();
                 connectionArray.add(SOCK);
-                System.out.println("Client connected form: " + SOCK.getLocalAddress().getHostName());
+                System.out.println("Client connected from: " + SOCK.getLocalAddress().getHostName());
 
                 AddUserName(SOCK);
 
