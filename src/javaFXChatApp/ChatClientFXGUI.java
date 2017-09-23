@@ -22,7 +22,6 @@ public class ChatClientFXGUI extends Application
         primaryStage.setScene(new Scene(root, 840, 360));
         primaryStage.show();
         primaryStage.setResizable(false);
-
     }
 
 
